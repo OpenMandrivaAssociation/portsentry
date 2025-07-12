@@ -1,0 +1,16 @@
+diff -up portsentry-2.0.2/CMakeLists.txt.bak portsentry-2.0.2/CMakeLists.txt
+--- portsentry-2.0.2/CMakeLists.txt.bak	2025-07-07 17:37:50.259013042 -0400
++++ portsentry-2.0.2/CMakeLists.txt	2025-07-07 17:39:20.980986262 -0400
+@@ -97,9 +97,9 @@ include(GNUInstallDirs)
+ configure_file(init/portsentry.service.in init/portsentry.service @ONLY)
+ 
+ install(TARGETS portsentry DESTINATION ${CMAKE_INSTALL_SBINDIR})
+-install(FILES examples/portsentry.conf DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/portsentry)
+-install(FILES examples/portsentry.ignore DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/portsentry)
+-install(FILES examples/logrotate.conf DESTINATION ${CMAKE_INSTALL_SYSCONFDIR}/logrotate.d RENAME portsentry)
++install(FILES examples/portsentry.conf DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/portsentry)
++install(FILES examples/portsentry.ignore DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/portsentry)
++install(FILES examples/logrotate.conf DESTINATION ${CMAKE_INSTALL_FULL_SYSCONFDIR}/logrotate.d RENAME portsentry)
+ install(FILES man/portsentry.8 DESTINATION ${CMAKE_INSTALL_MANDIR}/man8)
+ install(FILES man/portsentry.conf.8 DESTINATION ${CMAKE_INSTALL_MANDIR}/man8)
+ install(DIRECTORY docs/ DESTINATION ${CMAKE_INSTALL_DOCDIR})
