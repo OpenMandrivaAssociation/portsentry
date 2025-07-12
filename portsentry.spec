@@ -6,7 +6,7 @@ Source0:	https://github.com/portsentry/portsentry/archive/v%{version}/%{name}-%{
 Patch0:		portsentry-2.0.2.patch0
 Summary:	Portsentry monitors network traffic in order to detect port scans in real-time. 
 URL:		https://github.com/portsentry/portsentry
-License:	GPL
+License:	BSD-2	
 Group:		Networking/Other
 BuildRequires:	cmake
 BuildRequires:	pkgconfig(libpcap)
