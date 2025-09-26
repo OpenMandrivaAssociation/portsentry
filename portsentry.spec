@@ -1,9 +1,9 @@
 Name:		portsentry
-Version:	2.0.2
+Version:	2.0.5
 Release:	1
 Source0:	https://github.com/portsentry/portsentry/archive/v%{version}/%{name}-%{version}.tar.gz
 # PATCH to fix  cmake issue where files are installed to /usr/etc instead of /etc
-Patch0:		portsentry-2.0.2.patch0
+Patch0:		portsentry-2.0.5.patch0
 Summary:	Portsentry monitors network traffic in order to detect port scans in real-time. 
 URL:		https://github.com/portsentry/portsentry
 License:	BSD-2	
