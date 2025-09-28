@@ -1,0 +1,20 @@
+diff -up portsentry-2.0.5/CMakeLists.txt.omv portsentry-2.0.5/CMakeLists.txt
+--- portsentry-2.0.5/CMakeLists.txt.omv	2025-09-28 16:55:41.675510361 -0400
++++ portsentry-2.0.5/CMakeLists.txt	2025-09-28 16:57:09.820533513 -0400
+@@ -1,4 +1,7 @@
+ cmake_minimum_required(VERSION 3.10)
++if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.1.0")
++   cmake_policy(SET CMP0192 NEW)
++endif()
+ project(portsentry VERSION 2.0.5)
+ include(CheckCCompilerFlag)
+ 
+@@ -108,7 +109,7 @@ install(FILES Changes.md README.md DESTI
+ if (INSTALL_LICENSE)
+   install(FILES LICENSE DESTINATION ${CMAKE_INSTALL_DOCDIR})
+ endif()
+-install(FILES ${CMAKE_CURRENT_BINARY_DIR}/init/portsentry.service DESTINATION ${CMAKE_INSTALL_LIBDIR}/systemd/system)
++install(FILES ${CMAKE_CURRENT_BINARY_DIR}/init/portsentry.service DESTINATION ${CMAKE_INSTALL_PREFIX}/lib/systemd/system)
+ 
+ # PORTCON - helper test program used in system tests
+ add_executable(portcon portcon/main.c)
